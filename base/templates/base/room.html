@@ -5,5 +5,21 @@
 <h1>Room page</h1>
 {{ room.name }}
 
+<div class="comment-wrapper">
+  {% for message in room_messages %}
+    <div>
+      <small>@{{ message.user }} {{ message.created|timesince }} ago</small>
+      <p>{{ message.body }}</p>
+      <hr>
+    </div>
+  {% endfor %}
+</div>
+x
+
+
+
+
+
+
 {% endblock content %}
 
